@@ -1,7 +1,14 @@
+const $startButton = $('#btn__reset');
+const $startOverlay = $('#overlay');
+
 const PHGame = new Game();
-resetDisplay(){
+
+$startButton.on('click', function(){
+  $startOverlay.hide();
+});
+const resetDisplay = () => {
 
 }
-markButton(){
+const markButton = () => {
 
 }
