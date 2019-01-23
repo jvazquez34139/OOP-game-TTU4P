@@ -8,7 +8,7 @@ class Phrase{
     //might need to keep the space in
     for(let i = 0; i < this.chars.length; i++){
       let char = document.createElement('li');
-      char.innerHTML = '<li class="letter space"></li>';
+      char.innerHTML = '<li class="letter space"> </li>';
       document.querySelector('#phrase ul').appendChild(char);
     }
 
