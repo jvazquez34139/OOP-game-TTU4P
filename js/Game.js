@@ -7,8 +7,15 @@ class Game{
     //pick random phrase from phrases[]
     return this.phrases[Math.random() * (this.phrases.length - 1)];
   }
-  handleInteraction(){
+  handleInteraction(letter, element){
+    //removes lifes if wrong or show letters
+    if(this.phrase.checkLetter(letter)){
+      element.setAttribute('class', 'key chosen');
+    }else{
+      element.setAttribute('class', 'key chosen wrong');
+    }
 
+    //check for win
   }
   removeLife(){
     //cant miss more than 5 times
@@ -22,9 +29,13 @@ class Game{
   }
   checkForWin(){
 
+    //end game if win or loss;
   }
   gameOver(){
-
+    //if no more lifes or if phrase was guessed
+    //add text to #game-over-message
+    const message = document.querySelector('#game-over-message');
+    message.innerText = "Game Over SON!"
   }
   startGame(){
     //makes a phrase object

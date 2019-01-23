@@ -13,10 +13,16 @@ class Phrase{
     }
 
   }
-  checkLetter(){
-
+  checkLetter(letter){
+    let contains = false;
+    this.chars.forEach(char => {
+      if(letter == char){
+        contains = true;
+      }
+    });
+    return contains;
   }
-  showMatchedLetter(){
+  showMatchedLetter(letter){
 
   }
 }
