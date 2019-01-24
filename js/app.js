@@ -15,12 +15,18 @@ $startButton.on('click', function(){
 //disables letter clicked
 $keys.on('click', function(e){
   let letter = e.target.innerText;
-  PHGame.handleInteraction(letter, e.target);
+  let hitOrMiss = PHGame.handleInteraction(letter, e.target);
+  markButton(e.target,hitOrMiss)
 });
 
 const resetDisplay = () => {
 
 }
-const markButton = () => {
-
+const markButton = (element,outcome) => {
+  element.disabled = true;
+  if(outcome){
+    element.setAttribute('class', 'key chosen');
+  }else{
+    element.setAttribute('class', 'key chosen wrong');
+  }
 }

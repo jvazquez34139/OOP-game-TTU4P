@@ -11,10 +11,9 @@ class Game{
     //removes lifes if wrong or show letters
     //marks the keys on the keyboard
     if(this.phrase.checkLetter(letter)){
-      element.setAttribute('class', 'key chosen');
       this.checkForWin();
+      return true;
     }else{
-      element.setAttribute('class', 'key chosen wrong');
       if(this.missed >= 4){
         this.gameOver('YOU LOST!', 'lose');
         this.missed = 5
@@ -23,8 +22,8 @@ class Game{
         this.missed++;
         this.removeLife();
       }
+      return false
     }
-    element.disabled = true;
     //check for win
   }
   removeLife(){
