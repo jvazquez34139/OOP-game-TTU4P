@@ -11,9 +11,9 @@ const PHGame = new Game();
 //event listeners
 //start game level by clicking start
 $startButton.on('click', function(){
-  $startOverlay.hide();
   resetDisplay();
   PHGame.startGame();
+  $startOverlay.hide();
 });
 //handles interactions
 //disables letter clicked
