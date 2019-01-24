@@ -1,11 +1,11 @@
 class Game{
   constructor(){
     this.missed = 0;
-    this.phrases = ["hello world"];
+    this.phrases = ["hello world","i am the ultra boss",'how am i'];
   }
   getRandomPhrase(){
     //pick random phrase from phrases[]
-    return this.phrases[Math.random() * (this.phrases.length - 1)];
+    return this.phrases[Math.floor(Math.random() * (this.phrases.length))];
   }
   handleInteraction(letter, element){
     //removes lifes if wrong or show letters

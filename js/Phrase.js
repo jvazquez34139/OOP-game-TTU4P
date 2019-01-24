@@ -14,7 +14,6 @@ class Phrase{
         this.uniqueChars.push(char);
       }
     })
-    console.log(this.uniqueChars);
   }
   addPhraseToDisplay(){
     //adds new li element for each chars
@@ -26,13 +25,12 @@ class Phrase{
       document.querySelector('#phrase ul').appendChild(char);
     }
   }
-  checkLetter(letter){
-    let contains = false;
+  checkLetter(letter){    let contains = false;
     this.chars.forEach(char => {
       if(letter == char){
         contains = true;
+        //for determining win condition progress
         this.uniqueChars = this.uniqueChars.filter(char => char != letter);
-        console.log(this.uniqueChars);
       }
     });
     return contains;
