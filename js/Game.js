@@ -47,12 +47,13 @@ class Game{
     overlay.setAttribute('class',`start ${color}`)
     const message = document.querySelector('#game-over-message');
     message.innerText = msg;
+    //reset button
+    document.querySelector('#btn__reset').innerText = "Reset Game";
   }
   startGame(){
     //makes a phrase object
     this.phrase = new Phrase(this.getRandomPhrase());
     //displays hidden characters
     this.phrase.addPhraseToDisplay();
-
   }
 }

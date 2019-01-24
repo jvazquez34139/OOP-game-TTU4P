@@ -27,7 +27,7 @@ class Phrase{
           char.textContent = " ";
           char.setAttribute('class', 'space');
       }else{
-        char.textContent = this.chars[i];
+        char.textContent = this.chars[i].toUpperCase();
         char.setAttribute('class', 'letter');
       }
       document.querySelector('#phrase ul').appendChild(char);
