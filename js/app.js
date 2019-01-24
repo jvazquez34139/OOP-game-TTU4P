@@ -27,7 +27,7 @@ const resetDisplay = () => {
   $keys.attr('class','key');
   $keys.prop('disabled', false)
   PHGame.missed = 0;
-  $lives.attr('src', 'images/lostHeart.png');
+  $lives.attr('src', 'images/liveHeart.png');
   //just need to reset #phrase to have no list items
   $phrase.html("");
 }

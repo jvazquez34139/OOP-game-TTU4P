@@ -1,7 +1,8 @@
 class Phrase{
   constructor(phrase){
     this.phrase = phrase;
-    this.chars = this.phrase.split('').filter(char => char != ' ');
+    this.chars = this.phrase.split('')
+    //win condition is an empty array of unique chars
     this.uniqueChars = [];
     this.chars.forEach( char => {
       let unique = true;
@@ -13,19 +14,27 @@ class Phrase{
       if(unique){
         this.uniqueChars.push(char);
       }
-    })
+    });
+    this.uniqueChars = this.uniqueChars.filter(char => char != ' ');
   }
   addPhraseToDisplay(){
     //adds new li element for each chars
     //might need to keep the space in
     for(let i = 0; i < this.chars.length; i++){
       const char = document.createElement('li');
-      char.textContent = this.chars[i].toUpperCase();
-      char.setAttribute('class', 'letter')
+      //determines if space or letter
+      if(this.chars[i] == " "){
+          char.textContent = " ";
+          char.setAttribute('class', 'space');
+      }else{
+        char.textContent = this.chars[i];
+        char.setAttribute('class', 'letter');
+      }
       document.querySelector('#phrase ul').appendChild(char);
     }
   }
-  checkLetter(letter){    let contains = false;
+  checkLetter(letter){
+    let contains = false;
     this.chars.forEach(char => {
       if(letter == char){
         contains = true;
