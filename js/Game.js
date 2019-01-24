@@ -9,8 +9,8 @@ class Game{
   }
   handleInteraction(letter, element){
     //removes lifes if wrong or show letters
-    //marks the keys on the keyboard
     if(this.phrase.checkLetter(letter)){
+      this.phrase.showMatchedLetter(letter);
       this.checkForWin();
       return true;
     }else{
