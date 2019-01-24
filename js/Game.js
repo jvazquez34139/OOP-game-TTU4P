@@ -34,9 +34,9 @@ class Game{
     heart.setAttribute('src', 'images/lostHeart.png');
   }
   checkForWin(){
-    // if(win){
-    //   gameOver("YOU WIN!", "win");
-    // }
+    if(this.phrase.uniqueChars.length == 0){
+      this.gameOver("YOU WIN!", 'win')
+    }
     //end game if win or loss;
   }
   gameOver(msg,color){
