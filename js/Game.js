@@ -1,7 +1,37 @@
 class Game{
   constructor(){
     this.missed = 0;
-    this.phrases = ["hello world","i am the ultra boss",'how am i'];
+    this.phrases = ["hello world",
+                    "i am the ultra boss",
+                    "how am i",
+                    "rainbow",
+                    "servent",
+                    "science",
+                    "january",
+                    "february",
+                    "march",
+                    "april",
+                    "may",
+                    "june",
+                    "july",
+                    "august",
+                    "september",
+                    "october",
+                    "november",
+                    "december",
+                    "friday",
+                    "monday",
+                    "tuesday",
+                    "wednesday",
+                    "thursday",
+                    "sunday",
+                    "saturday",
+                    "baby",
+                    "the kid",
+                    "break my heart",
+                    "eat the cat",
+                    "bite the cow"
+                  ];
   }
   getRandomPhrase(){
     //pick random phrase from phrases[]
